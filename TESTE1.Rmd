@@ -1,0 +1,133 @@
+---
+title: "Rascunho1"
+author: "PAOLO"
+output:
+  html_document: default
+  pdf_document: default
+---
+x <- 4
+
+x + x
+
+#teste
+##TESTE
+###TESTE
+
+lista
+- 2
+- 5
+- 7
+
+plot (4:400)
+
+```{r}
+c(0, 1,2,3) < 1
+```
+!2 == 4
+
+```{r}
+install.packages("formatR")
+library(magrittr)
+```
+
+if (!require("devtools"))
+  install.packages("devtools")
+devtools::install_github("rstudio/shiny")
+
+
+```{r}
+sin(23)
+```
+
+x <- 2
+if( x == 1) 
+{ print ("verdade") 
+} else if (x == 2) {print ("mentira")}
+
+
+
+```{r}
+for (cont in 1:5) {print (cont)}
+```
+
+```{r}
+vetor <- 30:35
+indices <- seq_along (vetor)
+for(i in indices) {
+  print(vetor[1:i] / 2)
+  }
+```
+
+
+```{r}
+# set.seed(1)
+jogadas <- 0
+coroa <- FALSE
+while(!coroa) {
+  coroa <- runif(1) > 0.5
+  jogadas <- jogadas+1
+}
+
+jogadas
+```
+
+
+
+
+
+###ATOMIC
+
+Existem 5 classes basicas
+
+character  -> varchar do sql
+- numeric
+- integer
+- complex
+- logical
+
+###VETORES
+
+vetores possuem elementos de apenas 1 classe e apenas 1 classe.
+```{r}
+vetor1 <- c(1, 2, 3, 4)
+class(vetor1)
+
+length(vetor1)
+vetor1[1]
+vetor1[2]
+vetor1[c(1,2,1)]
+vetor1[vetor1 %%2 == 0 ]   
+vetor que pega numero par
+
+```
+
+
+```{r}
+m <- matrix(1:6, nrow = 2, ncol =3)
+m
+m[2,]
+m[2,1]
+
+t(m)
+
+dim(m)
+
+n <- t(m)
+
+m %*% n
+solve (m %% n)
+```
+
+###FUNCOES
+```{r}
+round(5,555)
+
+x <- 2
+
+soma <- function(x, y = 0) {
+  resposta <- x + y
+    return(resposta)
+}
+```
+
+                                                                                                           
